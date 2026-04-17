@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="cadastrar-aluno.css">
+
+<div class="pagina">
+
+  <h1 class="titulo">FICHA COMPLETA DO ALUNO</h1>
+
+  <div class="foto-container">
+    <img class="foto-aluno" src="assets/img/foto-aluno.png" alt="Foto do Aluno">
+  </div>
+
+  <div class="formulario">
+
+    <div class="campo">
+      <label class="label">NOME COMPLETO</label>
+      <input class="input" type="text" [(ngModel)]="aluno.nomeCompleto">
+    </div>
+
+    <div class="campo">
+      <label class="label">TURMA</label>
+      <input class="input" type="text" [(ngModel)]="aluno.turma">
+    </div>
+
+    <div class="campo">
+      <label class="label">ANO LETIVO</label>
+      <input class="input" type="text" [(ngModel)]="aluno.anoLetivo">
+    </div>
+
+  </div>
+
+  <div class="botoes">
+    <app-botao-confirmar texto="Salvar Alterações" icone="save"></app-botao-confirmar>
+    <app-botao-confirmar texto="Excluir Aluno" icone="delete"></app-botao-confirmar>
+  </div>
+
+</div>

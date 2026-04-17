@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="navegacao.css">
+
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" [opened]="true">
+
+    <header class="logo-area">
+      <img src="assets/imagens/logo-removebg-preview.png" alt="OPTech Logo" class="logo" />
+    </header>
+
+    <nav>
+      <a class="link" routerLink="home" routerLinkActive="active">
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
+      </a>
+
+      <a class="link" routerLink="turmas" routerLinkActive="active">
+        <mat-icon>person</mat-icon>
+        <span>Minha Conta</span>
+      </a>
+
+      <a class="link" routerLink="alunos" routerLinkActive="active">
+        <mat-icon>home</mat-icon>
+        <span>Ambientes</span>
+      </a>
+
+      <a class="link" routerLink="dados-aluno" routerLinkActive="active">
+        <mat-icon>table_rows</mat-icon>
+        <span>Fila de saída</span>
+      </a>
+
+      <a class="link" routerLink="cadastrar-alunos" routerLinkActive="active">
+        <mat-icon>group</mat-icon>
+        <span>Alunos/<br />Responsáveis</span>
+      </a>
+    </nav>
+
+    <footer class="sidenav-footer">
+      <a class="link sair" routerLink="/login">
+        <mat-icon>logout</mat-icon>
+        <span>Sair</span>
+      </a>
+    </footer>
+
+  </mat-drawer>
+
+  <mat-drawer-content class="sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>

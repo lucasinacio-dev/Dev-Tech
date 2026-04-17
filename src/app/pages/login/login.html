@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Educação – DevTech</title>
+  <link rel="stylesheet" href="./login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Imagem de fundo: troque o src pelo caminho da sua imagem -->
+    <img src="../../../../public/assets/imagens/fundo.png" alt="Fundo - Biblioteca" class="bg-image" aria-hidden="true" />
+    <div class="bg-dim"></div>
+
+    <div class="card">
+
+      <!-- Header -->
+      <div class="card-header">
+        <div class="logo-area">
+          <div class="logo-icon">🤖</div>
+          <div class="logo-text">
+            <span class="logo-brand">DEVTECH</span>
+            <span class="logo-sub">SOFTWARE &amp; TECHNOLOGY</span>
+          </div>
+        </div>
+        <div class="header-bar"></div>
+        <h1 class="portal-title">Portal Educação</h1>
+        <div class="title-divider"></div>
+      </div>
+
+      <!-- Body -->
+      <div class="card-body">
+
+        <!-- Coluna Esquerda: Login -->
+        <div class="col login-col">
+          <h2 class="col-title">Entrar</h2>
+
+          <div class="input-group">
+            <span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input type="text" id="loginEmail" placeholder="E-mail ou CPF" />
+            <span class="icon-right">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+          </div>
+
+          <div class="input-group">
+            <span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="password" id="loginSenha" placeholder="Sua Senha" />
+            <span class="icon-right toggle" id="toggleLoginPass">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </span>
+          </div>
+
+          <div class="forgot-row">
+            <a href="#" class="link-small">Esqueceu a senha?</a>
+          </div>
+
+          <button class="btn-blue" id="btnEntrar">Entrar no Portal</button>
+
+          <p class="hint">
+            Ainda não tem conta?
+            <a href="#" class="link-orange">Cadastre-se</a>
+          </p>
+        </div>
+
+        <!-- Divisor -->
+        <div class="col-divider"></div>
+
+        <!-- Coluna Direita: Cadastro -->
+        <div class="col register-col">
+          <h2 class="col-title">Cadastro de Novo Aluno</h2>
+
+          <div class="input-group">
+            <span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </span>
+            <input type="text" id="cadNome" placeholder="Nome Completo" />
+            <span class="icon-right">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+            </span>
+          </div>
+
+          <div class="input-group">
+            <span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="text" id="cadMatricula" placeholder="Número da matrícula" />
+            <span class="icon-right">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </span>
+          </div>
+
+          <div class="input-group">
+            <span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </span>
+            <input type="password" id="cadSenha" placeholder="Senha" />
+            <span class="icon-right toggle" id="toggleCadPass">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </span>
+          </div>
+
+          <button class="btn-orange" id="btnCadastrar">Criar Conta</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toggle mostrar/ocultar senha – Login
+    document.getElementById('toggleLoginPass').addEventListener('click', function () {
+      const input = document.getElementById('loginSenha');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      this.style.color = input.type === 'text' ? '#1a5fb4' : '#9aa5b8';
+    });
+
+    // Toggle mostrar/ocultar senha – Cadastro
+    document.getElementById('toggleCadPass').addEventListener('click', function () {
+      const input = document.getElementById('cadSenha');
+      input.type = input.type === 'password' ? 'text' : 'password';
+      this.style.color = input.type === 'text' ? '#1a5fb4' : '#9aa5b8';
+    });
+
+    // Botão Entrar
+    document.getElementById('btnEntrar').addEventListener('click', function () {
+      const email = document.getElementById('loginEmail').value.trim();
+      const senha = document.getElementById('loginSenha').value;
+      if (!email || !senha) {
+        alert('Preencha todos os campos de login!');
+        return;
+      }
+      // TODO: integrar com serviço de autenticação
+      alert('Login realizado com sucesso!');
+    });
+
+    // Enter nos campos de login
+    ['loginEmail', 'loginSenha'].forEach(function (id) {
+      document.getElementById(id).addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') document.getElementById('btnEntrar').click();
+      });
+    });
+
+    // Botão Criar Conta
+    document.getElementById('btnCadastrar').addEventListener('click', function () {
+      const nome      = document.getElementById('cadNome').value.trim();
+      const matricula = document.getElementById('cadMatricula').value.trim();
+      const senha     = document.getElementById('cadSenha').value;
+      if (!nome || !matricula || !senha) {
+        alert('Preencha todos os campos de cadastro!');
+        return;
+      }
+      // TODO: integrar com serviço de cadastro
+      alert('Cadastro realizado com sucesso!');
+    });
+
+    // Enter nos campos de cadastro
+    ['cadNome', 'cadMatricula', 'cadSenha'].forEach(function (id) {
+      document.getElementById(id).addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') document.getElementById('btnCadastrar').click();
+      });
+    });
+  </script>
+
+</body>
+</html>

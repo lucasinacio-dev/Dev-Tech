@@ -1,0 +1,58 @@
+<!-- NAVIGATION (não alterada) -->
+<app-botao-confirmar></app-botao-confirmar>
+<app-botao-confirmar texto="Atualizar" icone="sync"></app-botao-confirmar>
+<app-botao-confirmar texto="Salvar" icone="home"></app-botao-confirmar>
+
+<!-- LINK DO CSS -->
+<link rel="stylesheet" href="./home.css">
+
+<!-- CONTEÚDO DO DASHBOARD -->
+<div class="dashboard-content">
+
+    <!-- Cabeçalho -->
+    <div class="dashboard-header">
+        <h1>Dashboard</h1>
+        <p>Visão geral do sistema CheckMate</p>
+    </div>
+
+    <!-- Cards de navegação -->
+    <div class="dashboard-cards">
+
+        <!-- Card Turmas -->
+        <a class="nav-card" href="/turmas">
+            <img src="assets/imagens/turmas.png" alt="Turmas">
+        </a>
+
+        <!-- Card Fila de Saída -->
+        <a class="nav-card" href="/fila-saida">
+            <img src="assets/imagens/filadesaida.png" alt="Fila de Saída">
+        </a>
+
+        <!-- Card Alunos/Responsáveis -->
+        <a class="nav-card" href="/alunos">
+            <img src="assets/imagens/alunos.png" alt="Alunos/Responsáveis">
+        </a>
+
+    </div>
+
+    <!-- Cards de estatísticas -->
+    <div class="dashboard-stats">
+
+        <div class="stat-card azul">
+            <p>Alunos que vieram à escola</p>
+            <span class="numero">0</span>
+        </div>
+
+        <div class="stat-card laranja">
+            <p>Alunos que foram embora</p>
+            <span class="numero">0</span>
+        </div>
+
+        <div class="stat-card cinza">
+            <p>Número de Responsáveis</p>
+            <span class="numero">0</span>
+        </div>
+
+    </div>
+
+</div>
