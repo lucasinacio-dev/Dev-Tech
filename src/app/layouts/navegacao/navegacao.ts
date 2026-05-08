@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { MatIcon } from "@angular/material/icon";
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIcon } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 
 @Component({

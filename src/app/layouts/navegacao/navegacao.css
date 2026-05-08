@@ -1,97 +1,132 @@
-/* ===== Container principal ===== */
-.container {
+/* Container geral */
+.sidenav-container {
   height: 100vh;
-  width: 100vw;
+  background: transparent;
 }
 
-/* ===== Sidebar ===== */
+/* Sidebar */
 .sidenav {
-  width: 130px;
-  background-color: #1a3a5c;
+  width: 280px;
+  background: #0d1b3e;
+  border-right: none;
   display: flex;
   flex-direction: column;
-  padding: 0;
-  overflow: hidden;
+  padding: 24px 16px;
+  box-sizing: border-box;
 }
 
-/* ===== Logo ===== */
+/* Área do logo */
 .logo-area {
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 16px 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 12px;
+  padding: 8px 12px 20px;
 }
 
-.logo {
-  width: 70px;
-  object-fit: contain;
-}
-
-/* ===== Links de navegação ===== */
-nav {
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #2196f3, #00bcd4);
+  border-radius: 14px;
   display: flex;
-  flex-direction: column;
-  margin-top: 8px;
-}
-
-.link {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.logo-icon mat-icon {
+  color: #fff;
+  font-size: 26px;
+  width: 26px;
+  height: 26px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-size: 12px;
+  color: #7b8bb2;
+  margin-top: 2px;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 8px 0;
+}
+
+/* Menu de navegação */
+.nav-menu {
+  display: flex;
+  flex-direction: column;
   gap: 4px;
-  padding: 14px 8px;
-  color: #a8c5e0;
-  text-decoration: none;
-  cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
-  border-left: 3px solid transparent;
-  text-align: center;
+  padding: 12px 0;
+  flex: 1;
 }
 
-.link mat-icon {
+/* Itens de navegação */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #8a9bc4;
+  font-size: 15px;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-item mat-icon {
   font-size: 22px;
   width: 22px;
   height: 22px;
+  color: inherit;
 }
 
-.link span {
-  font-size: 11px;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.3;
-}
-
-.link:hover {
-  background-color: rgba(255, 255, 255, 0.08);
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
   color: #ffffff;
 }
 
-.link.active {
-  background-color: rgba(255, 255, 255, 0.12);
+/* Item ativo */
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.35), rgba(0, 188, 212, 0.15));
   color: #ffffff;
-  border-left: 3px solid #4db8ff;
+  border: 1px solid rgba(33, 150, 243, 0.25);
 }
 
-/* ===== Espaçador para empurrar "Sair" para baixo ===== */
-.spacer {
-  flex: 1;
+.nav-item.active mat-icon {
+  color: #42a5f5;
 }
 
-/* ===== Botão Sair ===== */
-.sair {
-  margin-bottom: 16px;
-  color: #a8c5e0;
+/* Rodapé / Sair */
+.nav-bottom {
+  padding: 12px 0 4px;
 }
 
-.sair:hover {
-  color: #ff6b6b;
-  background-color: rgba(255, 107, 107, 0.08);
+.nav-item.sair:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
 }
 
-/* ===== Conteúdo principal ===== */
-.sidenav-content {
-  background-color: #8ba0b5;
-  flex: 1;
-  overflow-y: auto;
+.nav-item.sair:hover mat-icon {
+  color: #ef4444;
+}
+
+/* Conteúdo principal */
+mat-sidenav-content {
+  background: #0a1628;
 }

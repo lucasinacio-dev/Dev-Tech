@@ -13,57 +13,26 @@ import { EditarUsuario } from './pages/editar-usuario/editar-usuario';
 import { Login } from './pages/login/login';
 
 export const routes: Routes = [
-
     {
-        path: "login",
+        path: 'login',
         component: Login
     },
-
     {
-        path: "",
+        path: '',
         component: Navegacao,
         children: [
-            {
-                path: "home",
-                component: Home
-            },
-            {
-                path: "turmas",
-                component: Turmas
-            },
-            {
-                path: "alunos",
-                component: Alunos
-            },
-            {
-                path: "dados-aluno",
-                component: DadosAluno
-            },
-            {
-                path: "cadastrar-turma",
-                component: CadastrarTurma
-            },
-            {
-                path: "cadastrar-aluno",
-                component: CadastrarAluno
-            },
-            {
-                path: "editar-turma",
-                component: EditarTurma
-            },
-            {
-                path: "editar-aluno",
-                component: EditarAluno
-            },
-            {
-                path: "usuarios",
-                component: Usuarios
-            },
-            {
-                path: "editar-usuario",
-                component: EditarUsuario
-            },
+            { path: '', redirectTo: 'home', pathMatch: 'full' }, // ← redirect padrão
+            { path: 'home', component: Home },
+            { path: 'turmas', component: Turmas },
+            { path: 'alunos', component: Alunos },
+            { path: 'dados-aluno', component: DadosAluno },
+            { path: 'cadastrar-turma', component: CadastrarTurma },
+            { path: 'cadastrar-aluno', component: CadastrarAluno },
+            { path: 'editar-turma', component: EditarTurma },
+            { path: 'editar-aluno', component: EditarAluno },
+            { path: 'usuarios', component: Usuarios },
+            { path: 'editar-usuario', component: EditarUsuario },
         ]
-    }
-
+    },
+    { path: '**', redirectTo: '' } // ← wildcard para rotas inválidas
 ];

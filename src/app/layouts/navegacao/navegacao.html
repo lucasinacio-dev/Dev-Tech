@@ -1,50 +1,58 @@
-<link rel="stylesheet" href="navegacao.css">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side" opened class="sidenav">
 
-<mat-drawer-container class="container" autosize>
-  <mat-drawer #drawer class="sidenav" mode="side" [opened]="true">
+    <!-- Logo -->
+    <div class="logo-area">
+      <div class="logo-icon">
+        <mat-icon>home_work</mat-icon>
+      </div>
+      <div class="logo-text">
+        <span class="logo-title">Dev-Tech</span>
+        <span class="logo-subtitle">Sistema Escolar</span>
+      </div>
+    </div>
 
-    <header class="logo-area">
-      <img src="assets/imagens/logo-removebg-preview.png" alt="OPTech Logo" class="logo" />
-    </header>
+    <div class="divider"></div>
 
-    <nav>
-      <a class="link" routerLink="home" routerLinkActive="active">
+    <!-- Menu principal -->
+    <nav class="nav-menu">
+      <a routerLink="/home" routerLinkActive="active" class="nav-item">
         <mat-icon>dashboard</mat-icon>
         <span>Dashboard</span>
       </a>
-
-      <a class="link" routerLink="turmas" routerLinkActive="active">
-        <mat-icon>person</mat-icon>
+      <a routerLink="/usuarios" routerLinkActive="active" class="nav-item">
+        <mat-icon>person_outline</mat-icon>
         <span>Minha Conta</span>
       </a>
-
-      <a class="link" routerLink="alunos" routerLinkActive="active">
-        <mat-icon>home</mat-icon>
-        <span>Ambientes</span>
+      <a routerLink="/turmas" routerLinkActive="active" class="nav-item">
+        <mat-icon>apartment</mat-icon>
+        <span>Turmas</span>
       </a>
-
-      <a class="link" routerLink="dados-aluno" routerLinkActive="active">
-        <mat-icon>table_rows</mat-icon>
-        <span>Fila de saída</span>
+      <a routerLink="/alunos" routerLinkActive="active" class="nav-item">
+        <mat-icon>schedule</mat-icon>
+        <span>Fila de Saída</span>
       </a>
-
-      <a class="link" routerLink="cadastrar-alunos" routerLinkActive="active">
-        <mat-icon>group</mat-icon>
-        <span>Alunos/<br />Responsáveis</span>
+      <a routerLink="/dados-aluno" routerLinkActive="active" class="nav-item">
+        <mat-icon>group_outlined</mat-icon>
+        <span>Alunos/Responsáveis</span>
       </a>
     </nav>
 
-    <footer class="sidenav-footer">
-      <a class="link sair" routerLink="/login">
+    <div class="divider"></div>
+
+    <!-- Sair -->
+    <div class="nav-bottom">
+      <a routerLink="/login" class="nav-item sair">
         <mat-icon>logout</mat-icon>
         <span>Sair</span>
       </a>
-    </footer>
+    </div>
 
-  </mat-drawer>
+  </mat-sidenav>
 
-  <mat-drawer-content class="sidenav-content">
+  <!-- Conteúdo principal injetado via router -->
+  <mat-sidenav-content>
     <router-outlet></router-outlet>
-  </mat-drawer-content>
+  </mat-sidenav-content>
 
-</mat-drawer-container>
+</mat-sidenav-container>
